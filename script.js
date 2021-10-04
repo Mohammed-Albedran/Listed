@@ -810,6 +810,7 @@ onload = ()=>{
      }if(screen.width <327){
          theTextValue.setAttribute("maxlength",23);
      }
+    countingTasks();
 }
 function darkLocal(){
     if(localStorage.getItem("darkMode") == null){
