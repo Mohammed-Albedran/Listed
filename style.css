@@ -1,0 +1,3279 @@
+/*tasks header font:font-family: 'Nunito', sans-serif;*/
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap'); */
+/*tasks font:font-family: 'Nunito', sans-serif;*/
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+/*add task and note font:font-family: 'Red Hat Display', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+
+
+/*العربية */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #fbfbfb;
+    transition: 0.3s;
+}
+.tasks{
+    width: 60%;
+    height: 90vh;
+    /* background-color: wheat; */
+    overflow: auto;
+    float: left;
+}
+.tasks header{
+    width: 100%;
+    height: 100px;
+    /* background-color: red; */
+}
+.tasks header h1{
+    line-height: 100px;
+    /* background-color: blue; */
+    float: left;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
+    /* background-color: red; */
+}
+.icons{
+    float: left;
+    margin-top: 3px;
+    margin-right: 5px;
+    margin-left: 15px;
+}
+.tasks header h1 .icons{
+    margin-top: 33px;
+    margin-right: 20px;
+    color: #5068a9;
+    cursor: pointer;
+}
+.tButtons{
+    width: 50%;
+    float: right;
+    /* background-color: yellow; */
+    height: 100px;
+}
+.tasksNumber{
+    color: #5068a9;
+}
+.tButtons select{
+    margin-top: 33px;
+    padding: 7px;
+    outline: none;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    border: 2px solid #5068a9;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.tButtons option{
+    font-weight: bold;
+    cursor: pointer;
+}
+.tButtons .addButton{
+    padding: 10px;
+    margin-left: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: #5068a9;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+.tButtons button .icon{
+    font-size: 20px;
+    font-weight: bloder;
+    color: white;
+}
+.task{
+    width: 92%;
+    height: 85px;
+    background-color: white;
+    border: 1px solid rgb(196, 196, 196);
+    margin: 10px;
+    border-radius: 7px;
+    /* border-left: 10px solid #86a6df; */
+    /* margin-top: 10px; */
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px; 
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px; */
+    transition: 0.3s;
+    overflow: hidden;
+}
+.task .checkBox{
+    margin-top: 34px;
+    float: left;
+    margin-left: 15px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #2ecc71;
+}
+.task h2{
+    line-height: 85px;
+    float: left;
+    margin-left: 13px;
+    font-family: 'Nunito', sans-serif;
+    font-size: larger;
+    transition: 0.3s;
+    /* background-color: purple; */
+}
+.task p{
+    visibility: hidden;
+}
+.task.dragging{
+    background-color: rgb(214, 214, 214);
+    opacity: .5;
+}
+.task2{
+    width: 92%;
+    height: 85px;
+    background-color: white;
+    border: 1px solid rgb(196, 196, 196);
+    margin: 10px;
+    border-radius: 7px;
+    /* border-left: 10px solid #86a6df; */
+    /* margin-top: 10px; */
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px; 
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px; */
+}
+.task2 .checkBox{
+    margin-top: 34px;
+    float: left;
+    margin-left: 15px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+.task2 h2{
+    line-height: 85px;
+    float: left;
+    margin-left: 13px;
+    font-family: 'Nunito', sans-serif;
+    font-size: larger;
+}
+.task3{
+    width: 92%;
+    height: 85px;
+    background-color: white;
+    border: 1px solid rgb(196, 196, 196);
+    margin: 10px;
+    border-radius: 7px;
+    /* border-left: 10px solid #86a6df; */
+    /* margin-top: 10px; */
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px; 
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px; */
+}
+.task3 .checkBox{
+    margin-top: 34px;
+    float: left;
+    margin-left: 15px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+.task3 h2{
+    line-height: 85px;
+    float: left;
+    margin-left: 13px;
+    font-family: 'Nunito', sans-serif;
+    font-size: larger;
+}
+.deleteTaskIcon{
+    float: right;
+    margin-top: 30px;
+    margin-right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #e74c3c;
+    /* background-color: blue; */
+}
+.taskTime{
+    float: right;
+    line-height: 85px;
+    margin-right: 20px;
+    font-family: 'Nunito', sans-serif;
+    color: #808080;
+    /* background-color: green; */
+}
+/*NOTES*/
+.notes{
+    width: 30%;
+    height: 90vh;
+    /* background-color: rgb(193, 179, 245); */
+    overflow: auto;
+    float: right;
+}
+.notes header{
+    width: 100%;
+    height: 100px;
+    /* background-color: rgb(112, 236, 122); */
+    z-index: 1;
+}
+.notes header h1{
+    line-height: 100px;
+    margin-left: 15px;
+    float: left;
+    /* background-color: red; */
+    font-family: 'Nunito', sans-serif;
+}
+.icon2{
+    font-size: 20px;
+    font-weight: bloder;
+}
+.notes header button{
+    float: right;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    margin-right: 40px;
+    cursor: pointer;
+    background-color: #5068a9;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+.notesMain{
+    justify-content: center;
+    /* background-color: aqua; */
+    width: 99%;
+    /* height: 90vh; */
+    float: right;
+}
+
+.note{
+    width: 160px;
+    height: 160px;
+    /* background-color: yellow; */
+    float: left;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 7px;
+    position: relative;
+    border: 1px solid rgb(180, 180, 180);
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    word-wrap: break-word;
+    /* z-index: 1; */
+    transition: 0.3s;
+    overflow: hidden;
+}
+.note:nth-child(2){
+    z-index: auto;
+}
+.note h4{
+    font-family: 'Nunito', sans-serif;
+    word-wrap: break-word;
+}
+.deleteNoteIcon{
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    font-size: 28px;
+    cursor: pointer;
+}
+.noteColor1{
+    background-color: #ffb3ba;
+}
+.noteColor2{
+    background-color: #ffffab;
+}
+.noteColor3{
+    background-color: #bae1ff;
+}
+.noteColor4{
+    background-color: #baffc9;
+}
+.noteColor5{
+    background-color: #ffdfba;
+}
+
+
+.notes header .editButtons2{
+    width: 150px;
+    height: 70px;
+    background-color: white;
+    /* margin-right: 135px;
+    margin-top: 5px; */
+    border: 1px solid gray;
+    display: none;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1;
+    float: right;
+    /* position: absolute;
+    right: 0;
+    top: 50px; */
+    float: right;
+    position: absolute;
+    right: 0;
+    margin-top: 80px;
+    margin-right: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 1 !important;
+    animation-name: editButtonsAnimation;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    overflow: hidden;
+}
+.notes header .editButtons2 button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    float: none;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: #5068a9;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+.notes header .editButtons2 span{
+    margin: auto;
+    text-align: center;
+}
+.notes header .editButtons2 span .icon{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.notes header .editButtons2 span .icon2{
+    font-size: 25px;
+    color: white;
+}
+.notes header .editButtons2 span p{
+    font-family: 'Nunito', sans-serif;
+}
+.addNote{
+    background-color: #5068a9;
+}
+.deleteAllNotes{
+    background-color: #e74c3c !important;
+}
+
+
+.addNewNote{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 430px;
+    height: 330px;
+    background-color: white;
+    border: 1.5px solid rgb(168, 168, 168);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1;
+    animation-name: addNew;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+    overflow: hidden;
+}
+.addNewNote h3{
+    padding: 10px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+.inputs{
+    margin-top: 20px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.inputs input{
+    font-family: 'Red Hat Display', sans-serif;
+}
+.noteField{
+    width: 270px;
+    height: 50px;
+    border: 1.5px solid rgb(158, 158, 158);
+    border-radius: 5px;
+    float: left;
+}
+.noteField legend{
+    color: gray;
+    margin-left: 20px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+.noteField input{
+    width: 97%;
+    height: 75%;
+    padding: 2px;
+    background-color: none;
+    border: none;
+    outline: none;
+    font-size: medium;
+}
+.noteColors{
+    width: 230px;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+}
+.noteColors button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1.5px solid rgb(102, 102, 102);
+    cursor: pointer;
+}
+.addNewNoteButton{
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #5068a9;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    margin-top: 22px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+.addNewNote a{
+    position: absolute;
+    top: 0;
+    right: 5px;
+    margin-right: 5px;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.editButtons{
+    width: 150px;
+    height: 70px;
+    background-color: white;
+    float: right;
+    margin-right: 135px;
+    z-index: 1;
+    margin-top: 5px;
+    border: 1px solid gray;
+    display: none;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    animation-name: editButtonsAnimation;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    overflow: hidden;
+}
+@keyframes editButtonsAnimation{
+    0%{
+        height: 0;
+        width: 0;
+    }
+    50%{
+        height: 0px;
+        width: 150px;
+    }
+    100%{
+        height: 70px;
+        width: 150px;
+    }
+}
+.editButtons button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+.editButtons span{
+    margin: auto;
+    text-align: center;
+}
+.editButtons span .icon{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.editButtons span .icon2{
+    font-size: 25px;
+    color: white;
+}
+.editButtons span p{
+    font-family: 'Nunito', sans-serif;
+}
+.addTask{
+    background-color: #5068a9;
+}
+.deleteAllTasks{
+    background-color: #e74c3c;
+}
+
+
+.addNewTask{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 430px;
+    height: 330px;
+    background-color: white;
+    border: 1.5px solid rgb(168, 168, 168);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1;
+    animation-name: addNew;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+    overflow: hidden;
+}
+@keyframes addNew{
+    0%{
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    }
+    100%{
+        border-radius: 5px;
+    }
+}
+.addNewTask h3{
+    padding: 10px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+.inputs{
+    margin-top: 20px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.inputs input{
+    font-family: 'Red Hat Display', sans-serif;
+}
+.taskField{
+    width: 220px;
+    height: 50px;
+    border: 1.5px solid rgb(158, 158, 158);
+    border-radius: 5px;
+    float: left;
+}
+.taskField legend{
+    color: gray;
+    margin-left: 15px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+.taskField input{
+    width: 97%;
+    height: 75%;
+    padding: 2px;
+    background-color: none;
+    border: none;
+    outline: none;
+    font-size: medium;
+}
+.timeField{
+    width: 80px;
+    height: 50px;
+    border: 1.5px solid rgb(158, 158, 158);
+    border-radius: 5px;
+    float: left;
+}
+.timeField input{
+    width: 80px;
+    border: none;
+    background-color: none;
+    outline: none;
+}
+.timeField legend{
+    margin-left: 10px;
+    color: gray;
+    font-family: 'Red Hat Display', sans-serif;
+}
+.taskColors{
+    width: 230px;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+}
+.taskColors button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1.5px solid #666666;
+    cursor: pointer;
+}
+.addNewTaskButton{
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #5068a9;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    margin-top: 22px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+.addNewTask a{
+    position: absolute;
+    top: 0;
+    right: 5px;
+    margin-right: 5px;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+.alert{
+    width: 300px;
+    height: 90px;
+    margin: 5px;
+    margin: auto;
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 5px;
+    transition: 0.5s;
+    border: 1px solid gray;
+    padding: 10px;
+    border-left: 7px solid blue;
+    transition: 0.3s;
+    overflow: hidden;
+}
+.alertContainer{
+    padding: 15px;
+    width: 330px;
+    height: 110px;
+    /* background-color: red; */
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    overflow: auto;
+    z-index: 1;
+    display: none;
+}
+.alert .content{
+    width: 85%;
+    float: left;
+    font-family: 'Red Hat Display', sans-serif;
+}
+.alert .content h3{
+    font-weight: bolder;
+}
+.alert .content h4{
+    font-weight: normal;
+}
+.deleteAlert{
+    float: right;
+    height: 90px;
+}
+.deleteAlert a{
+    font-size: 30px;
+    line-height: 90px;
+    font-weight: bold;
+    cursor: pointer;
+}
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+.settings{
+    width: 370px;
+    height: 320px;
+    background-color: white;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border: 0.5px solid gray;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: none;
+    animation-name: settingsAnimation;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    overflow: hidden;
+    transition: 0.3s;
+}
+@keyframes settingsAnimation{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 320px;
+    }
+}
+.settings header{
+    width: 100%;
+    height: 30px;
+}
+.settings header h2{
+    float: left;
+    margin: 10px;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: bolder;
+}
+.settings header a{
+    float: right;
+    font-size: 30px;
+    margin: 7px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.settings main{
+    margin-top: 60px;
+}
+.settings article{
+    width: 100%;
+    height: 50px;
+    /* background-color: red; */
+    margin-top: 10px;
+}
+.settings article h3{
+    margin-left: 10px;
+    float: left;
+    font-family: 'Red Hat Display', sans-serif;
+}
+.settings .newButton{
+    width: 48px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50px;
+    background-color: #a5a5a5;
+    float: right;
+    padding: 2px;
+    cursor: pointer;
+}
+.settings .newButton span{
+    width: 28px;
+    height: 20px;
+    background-color: white;
+    float: left;
+    border-radius: 100px;
+}
+.settings .activateB span{
+    float: right;
+}
+.settings .activateB{
+    background-color: #5068a9;
+}
+/* .alertControl .newButton{
+    background-color: #5068a9;
+}
+.alertControl .newButton span{
+    float: right;
+} */
+
+.settings .language .langRadios{
+    float: right;
+    margin-right: 10px;
+    /* background-color: red; */
+    justify-content: space-evenly;
+    display: flex;
+}
+.settings .language .langRadios h4{
+    /* background-color: blue; */
+    margin-top: 3px;
+    margin-left: 3px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+.settings .language .langRadios input{
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+
+.checkedTasks{
+    display: none;
+}
+.uncheckedTasks{
+    display: none;
+}
+
+
+/*Dark Theme*/
+.bodyDark{
+    background-color: #2a363b;
+}
+.tasksDark .icons , .tasksDark h1 bdi{
+    color: #75a9f9 !important;
+}
+.tasksDark .tButtons select{
+    background-color: #303f46;
+    color: #75a9f9;
+}
+.tasksDark .tButtons button{
+    background-color: #75a9f9;
+}
+.tasksDark header h1{
+    color: #f7f6f6;
+}
+.tasksDark main .task{
+    background-color: #303f46;
+    border: 1px solid rgb(51, 51, 51);
+    /* border-left: 10px solid #86a6df; */
+}
+.tasksDark main .task h2{
+    color: #f7f6f6;
+}
+[type="checkbox"]{
+    background-color: red;
+}
+ /*notes dark*/
+.notesDark header button{
+    background-color: #75a9f9;
+}
+.notesDark header h1{
+    color: #f7f6f6;
+}
+/*#region*/
+.notesDark .noteColor1{
+    background-color: #f08080 !important;
+    border: none;
+}
+.notesDark .noteColor2{
+    background-color: #ffee93 !important;
+    border: none;
+}
+.notesDark .noteColor3{
+    background-color: #abc4ff !important;
+    border: none;
+}
+.notesDark .noteColor4{
+    background-color: #78e08f !important;
+    border: none;
+}
+.notesDark .noteColor5{
+    background-color: #f6bc66 !important;
+    border: none;
+}/*#endregion*/
+.editButtonsDark{
+    background-color: #303f46 !important;
+    color: #f7f6f6;
+}
+.editButtonsDark .deleteAllTasks,.deleteAllNotes{
+    background-color: #e74c3c !important;
+}
+.editButtonsDark .addNote{
+    background-color: #75a9f9 !important;
+    color: white;
+}
+.addNewTaskDark{
+    background-color: #303f46;
+    color: #f7f6f6;
+}
+.addNewTaskDark input{
+    background-color: transparent;
+    color: white;
+}
+.addNewTaskDark legend{
+    color: #b6b6b6;
+}
+.addNewTaskDark .taskColors button{
+    border-color: #9c9c9c;
+}
+.addNewTaskDark .addNewTaskButton{
+    background-color: #75a9f9;
+    color: #e7e7e7;
+}
+.addNewNoteDark{
+    background-color: #303f46;
+    color: #f7f6f6;
+}
+.addNewNoteDark input{
+    background-color: transparent;
+    color: white;
+}
+.addNewNoteDark legend{
+    color: #b6b6b6;
+}
+.addNewNoteDark .addNewNoteButton{
+    background-color: #75a9f9;
+    color: #e7e7e7;
+}
+.addNewNoteDark .noteColors button{
+    border-color: #9c9c9c !important;
+}
+.addNewNoteDark .noteColors .noteColorButtons1{
+    background-color: #f08080 !important;
+}
+.addNewNoteDark .noteColors .noteColorButtons2{
+    background-color: #ffee93 !important;
+}
+.addNewNoteDark .noteColors .noteColorButtons3{
+    background-color: #abc4ff !important;
+}
+.addNewNoteDark .noteColors .noteColorButtons4{
+    background-color: #78e08f !important;
+}
+.addNewNoteDark .noteColors .noteColorButtons5{
+    background-color: #f6bc66 !important;
+}
+.alertContainerDark .alert{
+    background-color: #303f46 !important;
+    color: #f7f6f6 !important;
+}
+
+.settingsDark{
+    background-color: #303f46;
+    color: #f7f6f6;
+}
+.settingsDark article h3{
+    font-weight: lighter;
+}
+.settingsDark .newButton{
+    background-color: #1e272b;
+}
+.settingsDark .language .langRadios h4{
+    font-weight: lighter;
+}
+.settingsDark .activateB{
+    background-color: #75a9f9;
+}
+
+
+/*    ARABIC LANGUAGE       */
+
+.tasksAr{
+ float: right;   
+}
+.notesAr{
+    float: left;
+}
+/*        TASKS         */
+.tasksAr .task{
+    float: right;
+    /* z-index: 1 !important; */
+}
+.tasksAr .task .checkBox{
+    float: right;
+    margin-left: 1px;
+    /* z-index: 1; */
+    margin-right: 15px;
+}
+.tasksAr .task h2{
+    float: right;
+    margin-left: 0;
+    margin-right: 13px;
+    font-family: 'Tajawal', sans-serif;
+}
+.tasksAr .editButtons p{
+    font-family: 'Tajawal', sans-seri !important;
+}
+.tasksAr .deleteTaskIcon{
+    float: left;
+    margin-right: 0;
+    margin-left: 20px;
+}
+.tasksAr .taskTime{
+    float: left;
+    margin-right: 0;
+    margin-left: 20px;
+}
+.tasksAr header h1{
+    float: right;
+    font-family: 'Tajawal', sans-serif;
+}
+.alertContainerAr{
+    right: auto;
+    left: 10px;
+}
+.alertContainerAr .alert{
+    font-family: 'Tajawal', sans-serif;
+}
+.alertContainerAr .alert .content{
+    float: right;
+    text-align: right;
+}
+.alertContainerAr .alert .content h3,h4{
+    font-family: 'Tajawal', sans-serif;
+}
+.alertContainerAr .alert .deleteAlert{
+    float: left;
+}
+.tasksAr .icons{
+    float: right;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+.tasksAr header h1 .icons{
+    margin-right: 5px;
+    margin-left: 20px;
+}
+.tasksAr .tButtons{
+    float: right;
+}
+/*      /////////////    */
+/* .alertContainer{
+    display: block;
+} */
+/*     /////////////       */
+
+.tasksAr .editButtons{
+    position: absolute;
+    z-index: 1 !important;
+    margin-left: 120px;
+}
+.tasksAr select{
+    font-family: 'Tajawal', sans-serif;
+}
+.notesAr header h1{
+    float: right;
+    margin-left: 1px;
+    margin-right: 15px;
+    font-family: 'Tajawal', sans-serif;
+}
+.notesAr header button{
+    float: left;
+    margin-right: 0;
+    margin-left: 40px;
+}
+.notesAr .editButtons2 p{
+    font-family: 'Tajawal', sans-serif !important;
+}
+.notesAr .notesMain{
+    float: left;
+}
+.notesAr .note{
+    float: right;
+}
+.notesAr .note h4{
+    text-align: right;
+    font-family: 'Tajawal', sans-serif;
+}
+.notesAr header .editButtons2{
+    left: 0;
+}
+.addNewNoteAr h3{
+    text-align: right;
+    font-family: 'Tajawal', sans-serif;
+}
+.addNewNoteAr a{
+    right: 100%;
+    left: 5px;
+}
+.addNewNoteAr legend{
+    margin-left: 185px;
+    font-family: 'Tajawal', sans-serif;
+}
+.addNewNoteAr input{
+    text-align: right;
+    font-family: 'Tajawal', sans-serif;
+}
+.addNewNoteAr .addNewNoteButton{
+    font-family: 'Tajawal', sans-serif;
+}
+
+
+
+.addNewTaskAr h3{
+    float: right;
+    font-family: 'Tajawal', sans-serif;
+}
+.addNewTaskAr legend{
+    font-family: 'Tajawal', sans-serif;
+}
+.addNewTaskAr button{
+    font-family: 'Tajawal', sans-serif;
+}
+.addNewTaskAr a{
+    right: 100%;
+    left: 5px;
+}
+.addNewTaskAr .inputs{
+    clear: both;
+    margin-top: 40px;
+}
+.addNewTaskAr .inputs input{
+    text-align: right;
+    font-family: 'Tajawal', sans-serif;
+}
+
+
+
+.settingsAr header h2{
+    float: right;
+    font-family: 'Tajawal', sans-serif;
+}
+.settingsAr header a{
+    float: left;
+}
+.settingsAr article h3{
+    float: right;
+    margin-left: 0;
+    margin-right: 10px;
+    font-family: 'Tajawal', sans-serif;
+}
+.emptyAll bdi{
+    font-family: 'Tajawal', sans-serif !important;
+}
+.emptyUncheck bdi{
+    font-family: 'Tajawal', sans-serif !important;
+}
+.emptyCheck bdi{
+    font-family: 'Tajawal', sans-serif !important;
+}
+.emptyNote bdi{
+    font-family: 'Tajawal', sans-serif !important;
+}
+.settingsAr .newButton{
+    float: left;
+    margin-right: 0;
+    margin-left: 10px;
+}
+.settingsAr .language .langRadios{
+    float: left;
+    margin-right: 0;
+    margin-left: 10px;
+}
+.settingsAr .langRadios h4{
+    font-family: 'Tajawal', sans-serif !important;
+}
+
+
+
+.emptyAll{
+    margin-top: 15%;
+    text-align: center;
+    filter: opacity(30%);
+    z-index: 1;
+    display: block;
+}
+.emptyAll h1{
+    font-family: 'Red Hat Display', sans-serif;
+}
+.emptyAll .emptyIcon{
+    font-size: 100px;
+}
+
+.emptyCheck{
+    margin-top: 15%;
+    text-align: center;
+    filter: opacity(30%);
+    z-index: 1;
+    display: block;
+}
+.emptyCheck h1{
+    font-family: 'Red Hat Display', sans-serif;
+}
+.emptyCheck .emptyIcon{
+    font-size: 100px;
+}
+
+.emptyUncheck{
+    margin-top: 15%;
+    text-align: center;
+    filter: opacity(30%);
+    z-index: 1;
+    display: block;
+}
+.emptyUncheck h1{
+    font-family: 'Red Hat Display', sans-serif;
+}
+.emptyUncheck .emptyIcon{
+    font-size: 100px;
+}
+
+
+.emptyNote{
+    margin-top: 15%;
+    text-align: center;
+    filter: opacity(30%);
+    z-index: 1;
+    display: block;
+}
+.emptyNote h1{
+    font-family: 'Red Hat Display', sans-serif;
+}
+.emptyNote .emptyIcon{
+    font-size: 100px;
+}
+
+
+
+@media only screen and (max-width:1325px) and (min-width:1307px){
+.notes{
+    width: 32%;
+}
+}
+@media only screen and (max-width:1306px){
+.notes{
+    width: 32%;
+}
+.task h2{
+    font-size: large;
+}
+}
+@media only screen and (max-width:1247px) and (min-width:1210px){
+    .notes{
+        width: 33%;
+    }
+    .task h2{
+        font-size: medium;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 12px;
+    }
+}
+@media only screen and (max-width:1209px) and (min-width:1110px){
+    .notes{
+        width: 33%;
+    }
+    .note{
+        width: 140px;
+        height: 140px;
+    }
+    .task h2{
+        font-size: medium;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 12px;
+    }
+}
+@media only screen and (max-width:1109px) and (min-width: 1060px){
+    .notes{
+        width: 33%;
+    }
+    .note{
+        width: 130px;
+        height: 130px;
+    }
+    .note h4{
+        font-size: 13px;
+    }
+    .task h2{
+        font-size: 15px;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 12px;
+    }
+}
+@media only screen and (max-width:1059px) and (min-width: 1024px){
+    .notes{
+        width: 33%;
+    }
+    .note{
+        width: 130px;
+        height: 130px;
+    }
+    .note h4{
+        font-size: 13px;
+        margin-left: 10px;
+    }
+    .task h2{
+        font-size: 15px;
+    }
+    .taskTime{
+        margin-right: 15px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .task{
+        width: 94%;
+        z-index: auto;
+    }
+    /* .tButtons .addButton{
+        margin-left: 30px;
+    } */
+    .tButtons{
+        width: 48%;
+    }
+}
+@media only screen and (max-width:1023px) and (min-width: 960px){
+    .notes{
+        width: 33%;
+    }
+    .note{
+        width: 120px;
+        height: 120px;
+        padding: 7px;
+    }
+    .deleteNoteIcon{
+        font-size: 24px;
+    }
+    .note h4{
+        font-size: 11px;
+        margin-left: 10px;
+    }
+    .task h2{
+        font-size: 15px;
+    }
+    .taskTime{
+        margin-right: 15px;
+    }
+    .tasks header h1{
+        font-size: 30px;
+    }
+    .tButtons select{
+        padding: 5px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .task{
+        width: 94%;
+        z-index: auto;
+    }
+    /* .tButtons .addButton{
+        margin-left: 30px;
+    } */
+    .tButtons{
+        width: 48%;
+    }
+}
+@media only screen and (max-width:959px) and (min-width:924px){
+    .notes{
+        width: 33%;
+    }
+    .note{
+        width: 120px;
+        height: 120px;
+        padding: 7px;
+    }
+    .deleteNoteIcon{
+        font-size: 24px;
+    }
+    .note h4{
+        font-size: 11px;
+        margin-left: 10px;
+    }
+    .task h2{
+        font-size: 15px;
+    }
+    .taskTime{
+        margin-right: 15px;
+    }
+    .tasks header h1{
+        font-size: 30px;
+    }
+    .tButtons select{
+        padding: 5px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .tButtons .addButton{
+        margin-left: 40px;
+    }
+    .task{
+        width: 94%;
+        z-index: auto;
+    }
+    /* .tButtons .addButton{
+        margin-left: 30px;
+    } */
+    .tButtons{
+        width: 45%;
+    }
+}
+@media only screen and (max-width:923px) and (min-width:900px){
+    .notes{
+        width: 33%;
+    }
+    .note{
+        width: 110px;
+        height: 110px;
+        padding: 7px;
+    }
+    .deleteNoteIcon{
+        font-size: 24px;
+    }
+    .note h4{
+        font-size: 11px;
+        margin-left: 10px;
+    }
+    .task h2{
+        font-size: 15px;
+    }
+    .taskTime{
+        margin-right: 15px;
+    }
+    .tasks header h1{
+        font-size: 30px;
+    }
+    .tButtons select{
+        padding: 5px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .tButtons .addButton{
+        margin-left: 40px;
+    }
+    .task{
+        width: 94%;
+        z-index: auto;
+    }
+    /* .tButtons .addButton{
+        margin-left: 30px;
+    } */
+    .tButtons{
+        width: 45%;
+    }
+}
+@media only screen and (max-width:899px) and (min-width:858px){
+    .notes{
+        width: 33%;
+    }
+    .note{
+        width: 110px;
+        height: 110px;
+        padding: 7px;
+    }
+    .deleteNoteIcon{
+        font-size: 24px;
+    }
+    .note h4{
+        font-size: 11px;
+        margin-left: 10px;
+    }
+    .task h2{
+        font-size: 15px;
+    }
+    .taskTime{
+        margin-right: 15px;
+    }
+    .tasks header h1{
+        font-size: 30px;
+    }
+    .tButtons select{
+        padding: 5px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .tButtons .addButton{
+        margin-left: 40px;
+    }
+    .task{
+        width: 94%;
+        z-index: auto;
+    }
+    /* .tButtons .addButton{
+        margin-left: 30px;
+    } */
+    .tButtons{
+        width: 45%;
+    }
+    .tasks{
+        width: 65%;
+    }
+}
+@media only screen and (max-width:857px) and (min-width:834px){
+    .notes{
+        width: 33%;
+    }
+    .note{
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+    }
+    .deleteNoteIcon{
+        font-size: 24px;
+    }
+    .note h4{
+        font-size: 10px;
+        margin-left: 10px;
+    }
+    .notes header button{
+        margin-right: 20px;
+    }
+    .task h2{
+        font-size: 15px;
+    }
+    .taskTime{
+        margin-right: 15px;
+    }
+    .tasks header h1{
+        font-size: 30px;
+    }
+    .tButtons select{
+        padding: 5px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .tButtons .addButton{
+        margin-left: 40px;
+    }
+    .task{
+        width: 94%;
+        z-index: auto;
+    }
+    /* .tButtons .addButton{
+        margin-left: 30px;
+    } */
+    .tButtons{
+        width: 45%;
+    }
+    .tasks{
+        width: 65%;
+    }
+}
+@media only screen and (max-width:833px) and (min-width:792px){
+    .notes{
+        width: 33%;
+    }
+    .note{
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+    }
+    .deleteNoteIcon{
+        font-size: 24px;
+    }
+    .note h4{
+        font-size: 10px;
+        margin-left: 10px;
+    }
+    .notes header button{
+        margin-right: 20px;
+    }
+    .task h2{
+        font-size: 15px;
+    }
+    .taskTime{
+        margin-right: 15px;
+    }
+    .tasks header h1{
+        font-size: 30px;
+    }
+    .tButtons select{
+        padding: 5px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .tButtons .addButton{
+        margin-left: 10px;
+    } 
+    /*        */
+    .tasksAr .tButtons .addButton{
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .notesAr header button{
+        float: left;
+        margin-right: 0;
+        margin-left: 10px;
+    }
+    .notesAr header h1{
+        float: right;
+        margin-left: 1px;
+        margin-right: 15px;
+        font-family: 'Tajawal', sans-serif;
+    }
+    .notesAr header h1{
+        float: right;
+        margin-left: 1px;
+        margin-right: 15px;
+        font-family: 'Tajawal', sans-serif;
+    }
+    /*        */
+    .task{
+        width: 96%;
+        z-index: auto;
+    }
+    /* .tButtons .addButton{
+        margin-left: 30px;
+    } */
+    .tButtons{
+        width: 40%;
+    }
+    .tasks{
+        width: 65%;
+    }
+}
+@media only screen and (max-width:791px) and (min-width:780px){
+    .notes{
+        width: 33%;
+    }
+    .note{
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+    }
+    .deleteNoteIcon{
+        font-size: 24px;
+    }
+    .note h4{
+        font-size: 10px;
+        margin-left: 10px;
+    }
+    .notes header button{
+        margin-right: 20px;
+    }
+    /*        */
+    .tasksAr .tButtons .addButton{
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .notesAr header button{
+        float: left;
+        margin-right: 0;
+        margin-left: 10px;
+    }
+    .notesAr header h1{
+        float: right;
+        margin-left: 1px;
+        margin-right: 15px;
+        font-family: 'Tajawal', sans-serif;
+    }
+    .notesAr header h1{
+        float: right;
+        margin-left: 1px;
+        margin-right: 15px;
+        font-family: 'Tajawal', sans-serif;
+    }
+    /*        */
+    .task h2{
+        font-size: 15px;
+    }
+    .taskTime{
+        margin-right: 15px;
+    }
+    .tasks header h1{
+        font-size: 30px;
+    }
+    .tButtons select{
+        padding: 5px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .tButtons .addButton{
+        margin-left: 0px;
+    }
+    .task{
+        width: 96%;
+        z-index: auto;
+    }
+    /* .tButtons .addButton{
+        margin-left: 30px;
+    } */
+    .tButtons{
+        width: 40%;
+    }
+    .tasks{
+        width: 65%;
+    }
+}
+@media only screen and (max-width:779px) and (min-width:708px){
+    .notes{
+        float: none;
+        width: 80%;
+        margin: auto;
+    }
+    .note{
+        width: 150px;
+        height: 150px;
+        padding: 10px;
+    }
+    .deleteNoteIcon{
+        font-size: 27px;
+    }
+    .note h4{
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .notes header button{
+        margin-right: 20px;
+    }
+    .task h2{
+        font-size: 15px;
+    }
+    .taskTime{
+        margin-right: 15px;
+    }
+    .tasks header h1{
+        font-size: 30px;
+    }
+    .tButtons select{
+        padding: 5px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .tButtons .addButton{
+        margin-left: 50px;
+    }
+    .task{
+        width: 96%;
+        z-index: auto;
+    }
+    /* .tasks header h1{
+        float: none;
+        margin: auto;
+        text-align: center;
+    } */
+    /* .tasks header{
+        height: 200px;
+    } */
+    .tButtons{
+        width: 50%;
+        /* float: none; */
+    }
+    .tasks{
+        width: 90%;
+        float: none;
+        margin: auto;
+        height: 85vh;
+    }
+    .addNewNote{
+        top: 120%;
+    }
+}
+@media only screen and (max-width:707px) and (min-width:670px){
+    .notes{
+        float: none;
+        width: 80%;
+        margin: auto;
+    }
+    .note{
+        width: 140px;
+        height: 140px;
+        padding: 7px;
+    }
+    .deleteNoteIcon{
+        font-size: 27px;
+    }
+    .note h4{
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .notes header button{
+        margin-right: 20px;
+    }
+    .task h2{
+        font-size: 15px;
+    }
+    .taskTime{
+        margin-right: 15px;
+    }
+    .tasks header h1{
+        font-size: 30px;
+    }
+    .tButtons select{
+        padding: 5px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .tButtons .addButton{
+        margin-left: 50px;
+    }
+    .task{
+        width: 96%;
+        z-index: auto;
+    }
+    /* .tasks header h1{
+        float: none;
+        margin: auto;
+        text-align: center;
+    } */
+    /* .tasks header{
+        height: 200px;
+    } */
+    .tButtons{
+        width: 50%;
+        /* float: none; */
+    }
+    .tasks{
+        width: 90%;
+        float: none;
+        margin: auto;
+        height: 85vh;
+    }
+    .addNewNote{
+        top: 120%;
+    }
+}
+@media only screen and (max-width:669px) and (min-width:630px){
+    .notes{
+        float: none;
+        width: 85%;
+        margin: auto;
+    }
+    .note{
+        width: 140px;
+        height: 140px;
+        padding: 7px;
+    }
+    .deleteNoteIcon{
+        font-size: 27px;
+    }
+    .note h4{
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .notes header button{
+        margin-right: 20px;
+    }
+    .task h2{
+        font-size: 15px;
+    }
+    .taskTime{
+        margin-right: 15px;
+    }
+    .tasks header h1{
+        font-size: 30px;
+    }
+    .tButtons select{
+        padding: 5px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .tButtons .addButton{
+        margin-left: 30px;
+    }
+    .task{
+        width: 96%;
+        z-index: auto;
+    }
+    /* .tasks header h1{
+        float: none;
+        margin: auto;
+        text-align: center;
+    } */
+    /* .tasks header{
+        height: 200px;
+    } */
+    .tButtons{
+        width: 40%;
+        /* float: none; */
+    }
+    .tasks{
+        width: 95%;
+        float: none;
+        margin: auto;
+        height: 85vh;
+    }
+    .addNewNote{
+        top: 120%;
+    }
+}
+@media only screen and (max-width:629px) and (min-width:608px){
+    .notes{
+        float: none;
+        width: 85%;
+        margin: auto;
+    }
+    .note{
+        width: 140px;
+        height: 140px;
+        padding: 7px;
+    }
+    .deleteNoteIcon{
+        font-size: 27px;
+    }
+    .note h4{
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .notes header button{
+        margin-right: 20px;
+    }
+    .task h2{
+        font-size: 14px;
+    }
+    .taskTime{
+        margin-right: 15px;
+    }
+    .tasks header h1{
+        font-size: 30px;
+    }
+    .tButtons select{
+        padding: 5px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .tButtons .addButton{
+        margin-left: 30px;
+    }
+    .task{
+        width: 96%;
+        z-index: auto;
+    }
+    /* .tasks header h1{
+        float: none;
+        margin: auto;
+        text-align: center;
+    } */
+    /* .tasks header{
+        height: 200px;
+    } */
+    .tButtons{
+        width: 43%;
+        /* float: none; */
+    }
+    .tasks{
+        width: 95%;
+        float: none;
+        margin: auto;
+        height: 85vh;
+    }
+    .addNewNote{
+        top: 120%;
+    }
+}
+@media only screen and (max-width:607px) and (min-width:576px){
+    .notes{
+        float: none;
+        width: 90%;
+        margin: auto;
+    }
+    .note{
+        width: 140px;
+        height: 140px;
+        padding: 7px;
+    }
+    .deleteNoteIcon{
+        font-size: 27px;
+    }
+    .note h4{
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .notes header button{
+        margin-right: 20px;
+    }
+    .task h2{
+        font-size: 14px;
+    }
+    .taskTime{
+        margin-right: 15px;
+    }
+    .tasks header h1{
+        font-size: 30px;
+    }
+    .tButtons select{
+        padding: 5px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .tButtons .addButton{
+        margin-left: 30px;
+    }
+    .task{
+        width: 96%;
+        z-index: auto;
+    }
+    /* .tasks header h1{
+        float: none;
+        margin: auto;
+        text-align: center;
+    } */
+    /* .tasks header{
+        height: 200px;
+    } */
+    .tButtons{
+        width: 43%;
+        /* float: none; */
+    }
+    .tasks{
+        width: 95%;
+        float: none;
+        margin: auto;
+        height: 85vh;
+    }
+    .addNewNote{
+        top: 120%;
+    }
+}
+@media only screen and (max-width:575px) and (min-width:516px){
+    .notes{
+        float: none;
+        width: 90%;
+        margin: auto;
+    }
+    .note{
+        width: 180px;
+        height: 180px;
+        padding: 7px;
+    }
+    .deleteNoteIcon{
+        font-size: 27px;
+    }
+    .note h4{
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    .notes header button{
+        margin-right: 20px;
+    }
+    .task h2{
+        font-size: 15px;
+    }
+    .taskTime{
+        margin-right: 15px;
+    }
+    .tasks header h1{
+        font-size: 30px;
+    }
+    .tButtons select{
+        padding: 5px;
+        width: 100px;
+        font-size: 12px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .tButtons .addButton{
+        margin-left: 30px;
+    }
+    .task{
+        width: 94%;
+        z-index: auto;
+    }
+    /* .tasks header h1{
+        float: none;
+        margin: auto;
+        text-align: center;
+    } */
+    /* .tasks header{
+        height: 200px;
+    } */
+    .tButtons{
+        width: 40%;
+        /* float: none; */
+    }
+    .tasks{
+        width: 95%;
+        float: none;
+        margin: auto;
+        height: 85vh;
+    }
+    .addNewNote{
+        top: 120%;
+    }
+}
+@media only screen and (max-width:515px) and (min-width:478px){
+    .notes{
+        float: none;
+        width: 90%;
+        margin: auto;
+    }
+    .note{
+        width: 180px;
+        height: 180px;
+        padding: 7px;
+    }
+    .deleteNoteIcon{
+        font-size: 27px;
+    }
+    .note h4{
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    .notes header button{
+        margin-right: 20px;
+    }
+    .task h2{
+        font-size: 15px;
+    }
+    .taskTime{
+        margin-right: 15px;
+    }
+    .tasks header h1{
+        font-size: 30px;
+    }
+    .tButtons select{
+        padding: 5px;
+        width: 100px;
+        font-size: 12px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .tButtons .addButton{
+        margin-left: 20px;
+    }
+    .task{
+        width: 94%;
+        z-index: auto;
+    }
+    /* .tasks header h1{
+        float: none;
+        margin: auto;
+        text-align: center;
+    } */
+    /* .tasks header{
+        height: 200px;
+    } */
+    .tButtons{
+        width: 37%;
+        /* float: none; */
+    }
+    .tasks{
+        width: 100%;
+        float: none;
+        margin: auto;
+        height: 85vh;
+    }
+    .addNewNote{
+        top: 120%;
+    }
+}
+@media only screen and (max-width:477px) and (min-width:456px){
+    .notes{
+        float: none;
+        width: 100%;
+        margin: auto;
+    }
+    .note{
+        width: 180px;
+        height: 180px;
+        padding: 7px;
+    }
+    .deleteNoteIcon{
+        font-size: 27px;
+    }
+    .note h4{
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    .notes header button{
+        margin-right: 20px;
+    }
+    .task h2{
+        font-size: 15px;
+    }
+    .taskTime{
+        margin-right: 15px;
+    }
+    .tasks header h1{
+        font-size: 25px;
+    }
+    .tButtons select{
+        padding: 5px;
+        width: 100px;
+        font-size: 12px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .tButtons .addButton{
+        margin-left: 20px;
+    }
+    .task{
+        width: 94%;
+        z-index: auto;
+    }
+    /* .tasks header h1{
+        float: none;
+        margin: auto;
+        text-align: center;
+    } */
+    /* .tasks header{
+        height: 200px;
+    } */
+    .tButtons{
+        width: 37%;
+        /* float: none; */
+    }
+    .tasks{
+        width: 100%;
+        float: none;
+        margin: auto;
+        height: 85vh;
+    }
+    .addNewNote{
+        top: 120%;
+    }
+}
+@media only screen and (max-width:455px) and (min-width:432px){
+    .notes{
+        float: none;
+        width: 100%;
+        margin: auto;
+    }
+    .note{
+        width: 180px;
+        height: 180px;
+        padding: 7px;
+    }
+    .tasksAr .tButtons{
+        float: none;
+    }
+    .deleteNoteIcon{
+        font-size: 27px;
+    }
+    .note h4{
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    .notes header button{
+        margin-right: 20px;
+    }
+    .task h2{
+        font-size: 15px;
+    }
+    .taskTime{
+        margin-right: 15px;
+    }
+    .tasks header h1{
+        font-size: 30px;
+        float: none;
+        margin: auto;
+        text-align: center;
+    }
+    .tButtons select{
+        padding: 5px;
+        width: 120px;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .tButtons .addButton{
+        margin-left: 40px;
+    }
+    .task{
+        width: 94%;
+        z-index: auto;
+    }
+    
+    .tasks header{
+        height: 150px;
+    }
+    .editButtons{
+        z-index: 1;
+        position: absolute;
+    }
+    .tButtons{
+        margin: auto;
+        float: none;
+        height: 60px;
+    }
+    .tasks{
+        width: 100%;
+        float: none;
+        margin: auto;
+        height: 85vh;
+    }
+    .addNewNote{
+        top: 120%;
+    }
+}
+@media only screen and (max-width:431px) and (min-width:410px){
+    .notes{
+        float: none;
+        width: 100%;
+        margin: auto;
+    }
+    .note{
+        width: 170px;
+        height: 170px;
+        padding: 7px;
+    }
+    .tasksAr .tButtons{
+        float: none;
+    }
+    .deleteNoteIcon{
+        font-size: 27px;
+    }
+    .note h4{
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    .notes header button{
+        margin-right: 20px;
+    }
+    .task h2{
+        font-size: 15px;
+    }
+    .taskTime{
+        margin-right: 15px;
+    }
+    .tasks header h1{
+        font-size: 30px;
+        float: none;
+        margin: auto;
+        text-align: center;
+    }
+    .tButtons select{
+        padding: 5px;
+        width: 120px;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .tButtons .addButton{
+        margin-left: 40px;
+    }
+    .task{
+        width: 94%;
+        z-index: auto;
+    }
+    
+    .tasks header{
+        height: 150px;
+    }
+    .editButtons{
+        z-index: 1;
+        position: absolute;
+    }
+    .tButtons{
+        margin: auto;
+        float: none;
+        height: 60px;
+    }
+    .tasks{
+        width: 100%;
+        float: none;
+        margin: auto;
+        height: 85vh;
+    }
+    .addNewNote{
+        top: 120%;
+        width: 390px;
+        height: 290px;
+    }
+    .addNewTask{
+        width: 390px;
+        height: 290px;
+    }
+    .inputs{
+        margin-top: 0px;
+    }
+    .taskField{
+        width: 200px;
+        height: 50px;
+    }
+    .timeField{
+        width: 70px;
+    }
+}
+@media only screen and (max-width:409px) and (min-width:386px){
+    .notes{
+        float: none;
+        width: 100%;
+        margin: auto;
+    }
+    .note{
+        width: 160px;
+        height: 160px;
+        padding: 7px;
+    }
+    .tasksAr .tButtons{
+        float: none;
+    }
+    .deleteNoteIcon{
+        font-size: 27px;
+    }
+    .note h4{
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    .notes header button{
+        margin-right: 20px;
+    }
+    .task h2{
+        font-size: 15px;
+    }
+    .taskTime{
+        margin-right: 15px;
+    }
+    .tasks header h1{
+        font-size: 30px;
+        float: none;
+        margin: auto;
+        text-align: center;
+    }
+    .tButtons select{
+        padding: 5px;
+        width: 120px;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .tButtons .addButton{
+        margin-left: 20px;
+    }
+    .task{
+        width: 94%;
+        z-index: auto;
+    }
+    
+    .tasks header{
+        height: 150px;
+    }
+    .editButtons{
+        z-index: 1;
+        position: absolute;
+    }
+    .tButtons{
+        margin: auto;
+        float: none;
+        height: 60px;
+    }
+    .tasks{
+        width: 100%;
+        float: none;
+        margin: auto;
+        height: 85vh;
+    }
+    .addNewNote{
+        top: 120%;
+        width: 390px;
+        height: 290px;
+    }
+    .addNewTask{
+        width: 390px;
+        height: 290px;
+    }
+    .inputs{
+        margin-top: 0px;
+    }
+    .taskField{
+        width: 200px;
+        height: 50px;
+    }
+    .timeField{
+        width: 70px;
+    }
+}
+@media only screen and (max-width:385px) and (min-width:352px){
+    .notes{
+        float: none;
+        width: 100%;
+        margin: auto;
+    }
+    .tasksAr .tButtons{
+        float: none;
+    }
+    .note{
+        width: 140px;
+        height: 140px;
+        padding: 7px;
+    }
+    .deleteNoteIcon{
+        font-size: 27px;
+    }
+    .note h4{
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .notes header button{
+        margin-right: 20px;
+    }
+     /*       */
+     .tasksAr .editButtons{
+         right: 0px;
+     }
+     .notesAr .editButtons2{
+         margin-left: 20px;
+     }
+     /*      */
+    .task h2{
+        font-size: 13px;
+    }
+    .taskTime{
+        margin-right: 15px;
+        font-size: 11px;
+    }
+    .tasks header h1{
+        font-size: 30px;
+        float: none;
+        margin: auto;
+        text-align: center;
+    }
+    .tButtons select{
+        padding: 5px;
+        width: 120px;
+        font-size: 12px;
+        margin-top: 10px;
+        height: 35px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .tButtons .addButton{
+        margin-left: 10px;
+    }
+    .task{
+        width: 93%;
+        z-index: auto;
+    }
+    
+    .tasks header{
+        height: 150px;
+    }
+    .editButtons{
+        z-index: 1;
+        position: absolute;
+    }
+    .tButtons{
+        margin: auto;
+        float: none;
+        height: 60px;
+    }
+    .tasks{
+        width: 100%;
+        float: none;
+        margin: auto;
+        height: 85vh;
+    }
+    .addNewNote{
+        top: 120%;
+        width: 345px;
+        height: 250px;
+    }
+    .addNewNote .noteField{
+        width: 250px;
+        height: 45px;
+    }
+    .noteColors button{
+        width: 28px;
+        height: 28px;
+    }
+    .noteField legend{
+        font-size: 14px;
+    }
+    .addNewNoteButton{
+        padding: 8px 13px;
+    }
+    .addNewTask{
+        width: 345px;
+        height: 250px;
+    }
+    .inputs{
+        margin-top: 0px;
+        padding: 20px;
+    }
+    .taskField{
+        width: 170px;
+        height: 45px;
+    }
+    .taskField legend{
+        font-size: 14px;
+    }
+    .timeField{
+        width: 60px;
+        height: 45px;
+    }
+    .timeField legend{
+        font-size: 14px;
+    }
+    .taskColors button{
+        width: 28px;
+        height: 28px;
+    }
+    .addNewTaskButton{
+        padding: 8px 13px;
+    }
+    .settings{
+        width: 340px;
+        height: 300px;
+    }
+}
+@media only screen and (max-width:351px) and (min-width:342px){
+    .notes{
+        float: none;
+        width: 100%;
+        margin: auto;
+    }
+    .note{
+        width: 140px;
+        height: 140px;
+        padding: 7px;
+    }
+    .tasksAr .tButtons{
+        float: none;
+    }
+    /*       */
+    .tasksAr .editButtons{
+        right: 0px;
+    }
+    .notesAr .editButtons2{
+        margin-left: 20px;
+    }
+    /*      */
+    .deleteNoteIcon{
+        font-size: 27px;
+    }
+    .note h4{
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .notes header button{
+        margin-right: 20px;
+    }
+    .task h2{
+        font-size: 12px;
+    }
+    .taskTime{
+        margin-right: 15px;
+        font-size: 11px;
+    }
+    .tasks header h1{
+        font-size: 30px;
+        float: none;
+        margin: auto;
+        text-align: center;
+    }
+    .tButtons select{
+        padding: 5px;
+        width: 120px;
+        font-size: 12px;
+        margin-top: 10px;
+        height: 35px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .tButtons .addButton{
+        margin-left: 20px;
+    }
+    .task{
+        width: 93%;
+        z-index: auto;
+    }
+    
+    .tasks header{
+        height: 150px;
+    }
+    .editButtons{
+        z-index: 1;
+        position: absolute;
+    }
+    .tButtons{
+        margin: auto;
+        float: none;
+        height: 60px;
+        width: 60%;
+    }
+    .tasks{
+        width: 100%;
+        float: none;
+        margin: auto;
+        height: 85vh;
+    }
+    .addNewNote{
+        top: 120%;
+        width: 335px;
+        height: 250px;
+    }
+    .addNewNote .noteField{
+        width: 250px;
+        height: 45px;
+    }
+    .noteColors button{
+        width: 28px;
+        height: 28px;
+    }
+    .noteField legend{
+        font-size: 14px;
+    }
+    .addNewNoteButton{
+        padding: 8px 13px;
+    }
+    .addNewTask{
+        width: 335px;
+        height: 250px;
+    }
+    .inputs{
+        margin-top: 0px;
+        padding: 20px;
+    }
+    .taskField{
+        width: 170px;
+        height: 45px;
+    }
+    .taskField legend{
+        font-size: 14px;
+    }
+    .timeField{
+        width: 60px;
+        height: 45px;
+    }
+    .timeField legend{
+        font-size: 14px;
+    }
+    .taskColors button{
+        width: 28px;
+        height: 28px;
+    }
+    .addNewTaskButton{
+        padding: 8px 13px;
+    }
+    .settings{
+        width: 330px;
+        height: 300px;
+    }
+}
+@media only screen and (max-width:341px) and (min-width:326px){
+    .notes{
+        float: none;
+        width: 100%;
+        margin: auto;
+    }
+    /*       */
+    .tasksAr .editButtons{
+        right: 0px;
+    }
+    .notesAr .editButtons2{
+        margin-left: 20px;
+    }
+    /*      */
+    .note{
+        width: 130px;
+        height: 130px;
+        padding: 7px;
+    }
+    .tasksAr .tButtons{
+        float: none;
+    }
+    .deleteNoteIcon{
+        font-size: 27px;
+    }
+    .note h4{
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .notes header button{
+        margin-right: 20px;
+    }
+    .task h2{
+        font-size: 12px;
+        margin-left: 7px;
+    }
+    .taskTime{
+        margin-right: 15px;
+        font-size: 11px;
+    }
+    .tasks header h1{
+        font-size: 30px;
+        float: none;
+        margin: auto;
+        text-align: center;
+    }
+    .tButtons select{
+        padding: 5px;
+        width: 120px;
+        font-size: 12px;
+        margin-top: 10px;
+        height: 35px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .tButtons .addButton{
+        margin-left: 20px;
+    }
+    .task{
+        width: 93%;
+        z-index: auto;
+    }
+    
+    .tasks header{
+        height: 150px;
+    }
+    .editButtons{
+        z-index: 1;
+        position: absolute;
+    }
+    .tButtons{
+        margin: auto;
+        float: none;
+        height: 60px;
+        width: 60%;
+    }
+    .tasks{
+        width: 100%;
+        float: none;
+        margin: auto;
+        height: 85vh;
+    }
+    .addNewNote{
+        top: 120%;
+        width: 325px;
+        height: 250px;
+    }
+    .addNewNote .noteField{
+        width: 250px;
+        height: 45px;
+    }
+    .noteColors button{
+        width: 28px;
+        height: 28px;
+    }
+    .noteField legend{
+        font-size: 14px;
+    }
+    .addNewNoteButton{
+        padding: 8px 13px;
+    }
+    .addNewTask{
+        width: 325px;
+        height: 250px;
+    }
+    .inputs{
+        margin-top: 0px;
+        padding: 20px;
+    }
+    .taskField{
+        width: 170px;
+        height: 45px;
+    }
+    .taskField legend{
+        font-size: 14px;
+    }
+    .timeField{
+        width: 60px;
+        height: 45px;
+    }
+    .timeField legend{
+        font-size: 14px;
+    }
+    .taskColors button{
+        width: 28px;
+        height: 28px;
+    }
+    .addNewTaskButton{
+        padding: 8px 13px;
+    }
+    .settings{
+        width: 320px;
+        height: 300px;
+    }
+}
+@media only screen and (max-width:325px){
+    .notes{
+        float: none;
+        width: 100%;
+        margin: auto;
+    }
+    .note{
+        width: 120px;
+        height: 120px;
+        padding: 5px;
+    }
+    /*       */
+    .tasksAr .editButtons{
+        right: 0px;
+    }
+    .notesAr .editButtons2{
+        margin-left: 20px;
+    }
+    /*      */
+    .tasksAr .tButtons{
+        float: none;
+    }
+    .deleteNoteIcon{
+        font-size: 27px;
+    }
+    .note h4{
+        font-size: 13px;
+        margin-left: 10px;
+    }
+    .notes header button{
+        margin-right: 20px;
+    }
+    .task h2{
+        font-size: 11px;
+        margin-left: 7px;
+    }
+    .taskTime{
+        margin-right: 15px;
+        font-size: 9px;
+        font-weight: bolder;
+        margin-right: 12px;
+    }
+    .tasks header h1{
+        font-size: 30px;
+        float: none;
+        margin: auto;
+        text-align: center;
+    }
+    .tButtons select{
+        padding: 5px;
+        width: 120px;
+        font-size: 12px;
+        margin-top: 10px;
+        height: 35px;
+    }
+    .tButtons select option{
+        font-size:14px;
+    }
+    .addNewTask{
+        z-index: 1;
+    }
+    .editButtons{
+        z-index: 1 !important;
+    }
+    .task .checkBox{
+        width: 14px;
+        height: 14px;
+        margin-left: 10px;
+    }
+    .tButtons .addButton{
+        margin-left: 30px;
+    }
+    .task{
+        width: 93%;
+        z-index: auto;
+    }
+    
+    .tasks header{
+        height: 150px;
+    }
+    .editButtons{
+        z-index: 1;
+        position: absolute;
+    }
+    .tButtons{
+        margin: auto;
+        float: none;
+        height: 60px;
+        width: 70%;
+    }
+    .tasks{
+        width: 100%;
+        float: none;
+        margin: auto;
+        height: 85vh;
+    }
+    .addNewNote{
+        top: 120%;
+        width: 310px;
+        height: 240px;
+    }
+    .addNewNote .noteField{
+        width: 240px;
+        height: 40px;
+    }
+    .noteColors button{
+        width: 25px;
+        height: 25px;
+    }
+    .noteField legend{
+        font-size: 14px;
+    }
+    .addNewNoteButton{
+        padding: 8px 13px;
+    }
+    .addNewTask{
+        width: 310px;
+        height: 240px;
+    }
+    .inputs{
+        margin-top: 0px;
+        padding: 20px;
+    }
+    .taskField{
+        width: 160px;
+        height: 40px;
+    }
+    .taskField legend{
+        font-size: 13px;
+    }
+    .timeField{
+        width: 50px;
+        height: 40px;
+    }
+    .timeField legend{
+        font-size: 13px;
+    }
+    .taskColors button{
+        width: 25px;
+        height: 25px;
+    }
+    .addNewTaskButton{
+        padding: 8px 13px;
+    }
+    .settings{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+

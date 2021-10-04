@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!--icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+</head>
+<body class="">
+    <div class="tasks">
+        <header>
+            <h1 class="tasksTitle"><ion-icon class="icons" name="settings" onclick="openSettings()"></ion-icon>You have <bdi class="tasksNumber">5</bdi> Tasks</h1>
+            <div class="tButtons">
+                <select class="selectElement">
+                    <option class="allS" value="all">All Tasks</option>
+                    <option class="checkS" value="checked">Checked Tasks</option>
+                    <option class="uncheckS" value="unchecked">Unchecked Tasks</option>
+                </select>
+                
+                <button type="button" class="addButton" onclick="openEditButtons()"><span class="material-icons icon">edit</span></button>
+                <div class="editButtons">
+                    <span><button type="button" onclick="openAddNewTask('openDiv')" class="addTask"><ion-icon name="add" class="icon"></ion-icon></button><p>Add</p></span>
+                    <span><button type="button" onclick="deleteAllTasks()" class="deleteAllTasks"><span class="material-icons icon2">delete_forever</span></button><p>Delete all</p></span>
+                    
+                </div>
+            </div>
+        </header>
+        <main>
+             <main class="mainTasks container">
+                 <div class="emptyAll">
+                    <ion-icon class="emptyIcon" name="file-tray-outline"></ion-icon>
+                    <h1>You don't have any s</h1>
+                 </div>
+             </main>
+             <main class="checkedTasks container">
+                <div class="emptyCheck">
+                    <ion-icon class="emptyIcon" name="file-tray-outline"></ion-icon>
+                    <h1>You don't have any checkd tasks</h1>
+                 </div>
+             </main>
+             <main class="uncheckedTasks">
+                <div class="emptyUncheck">
+                    <ion-icon class="emptyIcon" name="file-tray-outline"></ion-icon>
+                 </div>
+             </main>
+        </main>
+    </div>
+    <div class="addNewTask">
+        <a onclick="openAddNewTask('closeDiv')">&times;</a>
+        <h3>Add new task</h3>
+        <article class="inputs">
+            <fieldset class="taskField"><legend>The task</legend><input id="textValue" autocomplete="off" type="text" maxlength="35"></fieldset>
+            <fieldset class="timeField"><legend>The time</legend><input id="timeValue" type="time"></fieldset>
+        </article>
+        <article class="taskColors">
+            <button style="background-color: #75a9f9;" onclick="selectTaskColor('blue')" type="button"></button>
+            <button style="background-color: #fc5c9c;" onclick="selectTaskColor('pink')" type="button"></button>
+            <button style="background-color: #17b978;" onclick="selectTaskColor('green')" type="button"></button>
+            <button style="background-color: #e74c3c;" onclick="selectTaskColor('red')" type="button"></button>
+            <button style="background-color: #bf5caa;" onclick="selectTaskColor('purple')" type="button"></button>
+            <button style="background-color: #ff9f43;" onclick="selectTaskColor('orange')" type="button"></button>
+        </article>
+        <button type="button" onclick="addingTheNewTask()" class="addNewTaskButton">Create a task</button>
+    </div>
+    <div class="addNewNote">
+        <a onclick="openAddNewNote('closeDiv')">&times;</a>
+        <h3>Add new note</h3>
+        <article class="inputs">
+            <fieldset class="noteField"><legend>The note</legend><input id="textValue2" autocomplete="off" type="text" maxlength="84"></fieldset>
+        </article>
+        <article class="noteColors">
+            <button class="noteColorButtons1" style="background-color: #ffb3ba;" onclick="selectNoteColor('red')" type="button"></button>
+            <button class="noteColorButtons2" style="background-color: #ffffab;" onclick="selectNoteColor('yellow')" type="button"></button>
+            <button class="noteColorButtons3" style="background-color: #bae1ff;" onclick="selectNoteColor('blue')" type="button"></button>
+            <button class="noteColorButtons4" style="background-color: #baffc9;" onclick="selectNoteColor('green')" type="button"></button>
+            <button class="noteColorButtons5" style="background-color: #ffdfba;" onclick="selectNoteColor('orange')" type="button"></button>
+        </article>
+        <button type="button" onclick="addToNoteMain()" class="addNewNoteButton">Create a note</button>
+    </div>
+
+    <div class="settings">
+        <header><h2>Settings</h2><a onclick="openSettings()">&times;</a></header>
+        <main>
+            <article class="darkTheme">
+                <h3>Dark theme</h3>
+                <div class="newButton darkButton" onclick="activateButton(this)"><span></span></div>
+            </article>
+            <article class="alertControl">
+                <h3>Alerts</h3>
+                <div class="newButton alertButton activateB" onclick="activateButton(this)"><span></span></div>
+            </article>
+            <article class="language">
+                <h3>Language</h3>
+                <div class="langRadios"><input type="radio" name="lang" id="enLang"><h4>English</h4><input type="radio" name="lang" id="arLang"><h4>Arabic</h4></div>
+            </article>
+        </main>
+    </div>
+    
+    <div class="notes">
+        <header>
+            <h1>Sticky notes</h1>
+            <button type="button" onclick="openEditButtons2()"><span class="material-icons icon2">edit</span></button>
+            <div class="editButtons2">
+                <span><button type="button" onclick="openAddNewNote('openDiv')" class="addNote"><ion-icon name="add" class="icon"></ion-icon></button><p>Add</p></span>
+                <span><button type="button" onclick="deleteAllNotes()" class="deleteAllNotes"><span class="material-icons icon2">delete_forever</span></button><p>Delete all</p></span>
+            </div>
+        </header>
+        <main class="notesMain">
+            <div class="emptyNote">
+                <ion-icon class="emptyIcon" name="file-tray-outline"></ion-icon>
+                <h1>You don't have any notes</h1>
+            </div>
+        </main>
+    </div>
+    <!-- <div class="alert">
+        <article class="content">
+            <h3>You have a task to do</h3>
+            <h4>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</h4>
+        </article>
+        <span class="deleteAlert"><a onclick="remove2(this.parentElement.parentElement)">&times;</a></span>
+    </div> -->
+
+    <div class="alertContainer"></div>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
