@@ -1103,13 +1103,13 @@ emptyTaskAll();
 
 
 
-// function countingTasks(){
-//     var mainElement = document.querySelector(".mainTasks");
-//     var theNumber = document.querySelector(".tasksNumber");
-//     var theNTasks = mainElement.querySelectorAll(".task");
-//     theNumber.innerHTML = theNTasks.length;
-// }
-// countingTasks();
+ function countingTasks(){
+     var mainElement = document.querySelector(".mainTasks");
+     var theNumber = document.querySelector(".tasksNumber");
+     var theNTasks = mainElement.querySelectorAll(".task");
+     theNumber.innerHTML = theNTasks.length;
+ }
+countingTasks();
 
 
 var theTextValue = document.getElementById("textValue");
