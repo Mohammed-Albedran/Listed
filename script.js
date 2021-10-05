@@ -448,6 +448,12 @@ selectElement.onchange = ()=>{
     emptyTaskAll();
     emptyTaskCheck();
     emptyTaskUncheck();
+    if(localStorage.getItem("currentLang") == "ar"){
+        arLang.checked = "true";
+        activateLang();
+    }else if(localStorage.getItem("currentLang") == "en" || localStorage.getItem("currentLang") == null){
+        enLang.checked = "true";
+    }
 }
 
 
