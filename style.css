@@ -836,7 +836,7 @@ body{
     left: 50%;
     background-color: rgba(29, 29, 29, 0.76);
     z-index: 1;
-    display: block;
+    display: none;
 }
 .welcome{
     width: 500px;
