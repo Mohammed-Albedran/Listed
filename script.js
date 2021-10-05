@@ -817,6 +817,8 @@ onload = ()=>{
      }
      countingTasks();
      welcomeMessage();
+     emptyNote();
+     emptyTaskAll();
 }
 function darkLocal(){
     if(localStorage.getItem("darkMode") == null){
